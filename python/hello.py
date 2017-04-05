@@ -1,0 +1,2 @@
+#はろーわーるど
+print("hello world!")

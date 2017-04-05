@@ -1,0 +1,14 @@
+# coding: utf-8
+#フィボナッチ(リストでメモ化)
+
+def fiblist_sub(n,l):
+    if(len(l)>n):
+        return l[0]
+    else:
+        return fiblist_sub(n,[l[0]+l[1]]+l)
+        
+
+def fiblist(n):
+    return fiblist_sub(n,[1,1])
+
+print fiblist(20)

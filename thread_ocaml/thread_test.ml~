@@ -1,0 +1,10 @@
+open Thread
+
+
+let counter = ref 0
+let inc () = counter:=!counter+1
+let rec produce (id,i) =
+  if i>0 then Printf.printf "process%d: %d\n" id i else produce (id,i-1)
+let rec c_thread threads n i =
+  if i<n then c_thread ((Thread.create produce (i,0))::threads) n (i+1)
+  else threads
