@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include <math.h>
 
+/*DO NOT FORGET -lm*/
 
 double random_(double max,double min){
-  return (max-min)*(rand()+1.0)/RAND_MAX+min;
+  return (max-min)*((double)rand())/(RAND_MAX)+min;
 }
-
 
 double f(double x){
   return x;
