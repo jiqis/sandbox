@@ -9,3 +9,6 @@ client.exe: client.c
 	$(CC) $(FLAGS) -o $@ $^
 test-program.exe: test-program.c
 	$(CC) $(FLAGS) -o $@ $^
+	
+clean:
+	rm -f *.exe *.o *~
