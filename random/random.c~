@@ -1,0 +1,7 @@
+
+int random(){
+  static unsigned int x=0xa0bacafe;
+  int ret = (x>>16)&255;
+  x=743*x+347;
+  return ret;
+}

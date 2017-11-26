@@ -32,13 +32,8 @@ def correlative (xs,ys):
         sy=0.0
         ax=average(xs)
         ay=average(ys)
-        print(ax)
-        print(ay)
         for i in range(nx):
             s+=(xs[i]-ax)*(ys[i]-ay)
             sx+=(xs[i]-ax)**2
             sy+=(ys[i]-ay)**2
-        print(s)
-        print(sx)
-        print(sy)
         return s/m.sqrt(sx*sy)
