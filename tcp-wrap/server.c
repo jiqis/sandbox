@@ -43,6 +43,9 @@ int executer(int input,int output){
 		}
 		fprintf(stderr,"wrote %d byte\n",i);
 		close(pi[1]);
+		char header[]="{\"jsonrpc\": \"2.0\", \"id\": 0, \"result\": \"" ;
+		char footer[]="\"}\n";
+		write(output,header,strlen(header));
 		while((count=read(po[0],buf,BUFSIZE))>0){
 			i=0;
 			if(count<BUFSIZE) buf[count]=0;
@@ -50,6 +53,7 @@ int executer(int input,int output){
 			while(i<count) i+=write(output,&(buf[i]),count);
 		}	
 		close(po[0]);
+		write(output,footer,strlen(footer));
 		close(output);
 		exit(0);
 	}else{
@@ -65,7 +69,7 @@ int executer(int input,int output){
 			dup2(po[1],1);
 			close(input);
 			if(input!=output) close(output);
-			execl("./test-program.exe","test-program.exe",NULL);
+			execl("/cygdrive/c/ProgramData/Oracle/Java/javapath/java","java","-jar","./BerkeleyParser-1.7.jar","-gr","eng_sm6.gr",NULL);
 			perror("test");
 			exit(-1);
 		}else{
@@ -121,3 +125,34 @@ int main(){
 	tcp_connection();
 	return 0;
 }
+
+/*
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+JSONの仕様:
+
+tag = "<tagname>" : (value | "string" | json_data | [args])
+json_data = { tag [, tag]* }
+
+空白文字: スペース,タブ,改行
+value: 数字
+<tagname>は空白文字不可,""で囲う
+
+JsonRPC用(というかparser用)のフォーマット
+input: 
+{"jsonrpc": "2.0", "method": "parse", "params": [<values>], "id": 0}
+
+最悪<values>さえ読めればOK→入力の"["と"]"を探し、その値の間を読む
+文字列は""で囲われているので、Parserに通す前に""を削除する
+
+output:
+{"jsonrpc": "2.0", "id": <id>, "result": "<result>"}
+OR
+{"jsonrpc": "2.0", "id": <id>, "error": "<eror explanation>"}
+
+resultとerrorは共存不可
+<id>はinputのidと一致してなければダメな気がする→0で固定できるか確認
+
+方針: 出力の前に' {"jsonrpc": "2.0", "id": 0, "result": " 'を、後に' "}\n 'をつけておくる
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
