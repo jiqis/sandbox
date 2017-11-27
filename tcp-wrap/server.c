@@ -12,6 +12,8 @@
 #define BUFSIZE 8192
 #define PORT 8080
 #define output_log_wait(r,status,exit_code,process_name) if(r<0){perror("waitpid");}else if(WIFEXITED(status)){exit_code=WEXITSTATUS(status);fprintf(stderr,"child process '%s' exited successfully (%d)\n",process_name,exit_code);}else{fprintf(stderr,"%s: anormal child status: %04x\n",process_name,status);}
+
+char filename[256] = "./test-program.exe";
 int executer(int input,int output){
 	int status;
 	int exit_code;
@@ -65,7 +67,7 @@ int executer(int input,int output){
 			dup2(po[1],1);
 			close(input);
 			if(input!=output) close(output);
-			execl("./test-program.exe","test-program.exe",NULL);
+			execl(filename,filename,NULL);
 			perror("test");
 			exit(-1);
 		}else{
@@ -116,8 +118,11 @@ int tcp_connection(){
 	return 0;
 	
 }
-int main(){
-	//executer(0,1);
+int main(int argc,char** argv){
+	if (argc>1){
+		strcpy(filename,argv[1]);
+		fprintf(stderr,"process: %s\n",filename);
+	}
 	tcp_connection();
 	return 0;
 }
