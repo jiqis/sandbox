@@ -39,10 +39,12 @@ int  main(){
 	}
 	fprintf(stderr,"wrote %d byte\n",n);
 	int r;
-	if((r=read(dest,buf,BUFSIZE))>0);{
-		buf[r]=0;
-		fprintf(stderr,"\e[34m%s\e[39m\n",buf);
+	i=0;
+	while((r=read(dest,&buf[i],BUFSIZE))>0){
+		i+=r;
 	}
+	buf[i]=0;
+	fprintf(stderr,"\e[34m%s\e[39m\n",buf);
 	close(dest);
 	return 0;
 }

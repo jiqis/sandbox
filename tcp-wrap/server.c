@@ -9,6 +9,7 @@
 #include <arpa/inet.h>
 #include <sys/select.h>
 #include<sys/time.h>
+#include<errno.h>
 #define BUFSIZE 8192
 #define PORT 8080
 #define output_log_wait(r,status,exit_code,process_name) if(r<0){perror("waitpid");}else if(WIFEXITED(status)){exit_code=WEXITSTATUS(status);fprintf(stderr,"child process '%s' exited successfully (%d)\n",process_name,exit_code);}else{fprintf(stderr,"%s: anormal child status: %04x\n",process_name,status);}
@@ -47,15 +48,25 @@ int executer(int input,int output){
 		close(pi[1]);
 		char header[]="{\"jsonrpc\": \"2.0\", \"id\": 0, \"result\": \"" ;
 		char footer[]="\"}\n";
-		write(output,header,strlen(header));
+		if(write(output,header,strlen(header))<0){
+			perror("write");
+			exit(-1);
+		}
 		while((count=read(po[0],buf,BUFSIZE))>0){
 			i=0;
 			if(count<BUFSIZE) buf[count]=0;
 			fprintf(stderr,">%s\n",buf);
 			while(i<count) i+=write(output,&(buf[i]),count);
-		}	
+		}
 		close(po[0]);
-		write(output,footer,strlen(footer));
+		if(count<0){
+			perror("read");
+			exit(-1);
+		}
+		if(write(output,footer,strlen(footer))<0){
+			perror("write");
+			exit(-1);
+		}
 		close(output);
 		exit(0);
 	}else{
@@ -82,8 +93,10 @@ int executer(int input,int output){
 			close(po[1]);
 			pid_t r=waitpid(child_input,&status,0);
 			output_log_wait(r,status,exit_code,"input");
+			if(status!=0) fprintf(stderr,"%s\n",strerror(status));
 			r=waitpid(child_exec,&status,0);
-			output_log_wait(r,status,exit_code,"exec");			
+			output_log_wait(r,status,exit_code,"exec");
+			fprintf(stderr,"%s\n",strerror(errno));
 		}
 	}
 	return 0;
@@ -134,31 +147,31 @@ int main(int argc,char** argv){
 
 /*
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-JSON‚Ìd—l:
+JSONã®ä»•æ§˜:
 
 tag = "<tagname>" : (value | "string" | json_data | [args])
 json_data = { tag [, tag]* }
 
-‹ó”’•¶š: ƒXƒy[ƒX,ƒ^ƒu,‰üs
-value: ”š
-<tagname>‚Í‹ó”’•¶š•s‰Â,""‚ÅˆÍ‚¤
+ç©ºç™½æ–‡å­—: ã‚¹ãƒšãƒ¼ã‚¹,ã‚¿ãƒ–,æ”¹è¡Œ
+value: æ•°å­—
+<tagname>ã¯ç©ºç™½æ–‡å­—ä¸å¯,""ã§å›²ã†
 
-JsonRPC—p(‚Æ‚¢‚¤‚©parser—p)‚ÌƒtƒH[ƒ}ƒbƒg
+JsonRPCç”¨(ã¨ã„ã†ã‹parserç”¨)ã®ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆ
 input: 
 {"jsonrpc": "2.0", "method": "parse", "params": [<values>], "id": 0}
 
-Åˆ«<values>‚³‚¦“Ç‚ß‚ê‚ÎOK¨“ü—Í‚Ì"["‚Æ"]"‚ğ’T‚µA‚»‚Ì’l‚ÌŠÔ‚ğ“Ç‚Ş
-•¶š—ñ‚Í""‚ÅˆÍ‚í‚ê‚Ä‚¢‚é‚Ì‚ÅAParser‚É’Ê‚·‘O‚É""‚ğíœ‚·‚é
+æœ€æ‚ª<values>ã•ãˆèª­ã‚ã‚Œã°OKâ†’å…¥åŠ›ã®"["ã¨"]"ã‚’æ¢ã—ã€ãã®å€¤ã®é–“ã‚’èª­ã‚€
+æ–‡å­—åˆ—ã¯""ã§å›²ã‚ã‚Œã¦ã„ã‚‹ã®ã§ã€Parserã«é€šã™å‰ã«""ã‚’å‰Šé™¤ã™ã‚‹
 
 output:
 {"jsonrpc": "2.0", "id": <id>, "result": "<result>"}
 OR
 {"jsonrpc": "2.0", "id": <id>, "error": "<eror explanation>"}
 
-result‚Æerror‚Í‹¤‘¶•s‰Â
-<id>‚Íinput‚Ìid‚Æˆê’v‚µ‚Ä‚È‚¯‚ê‚Îƒ_ƒ‚È‹C‚ª‚·‚é¨0‚ÅŒÅ’è‚Å‚«‚é‚©Šm”F
+resultã¨errorã¯å…±å­˜ä¸å¯
+<id>ã¯inputã®idã¨ä¸€è‡´ã—ã¦ãªã‘ã‚Œã°ãƒ€ãƒ¡ãªæ°—ãŒã™ã‚‹â†’0ã§å›ºå®šã§ãã‚‹ã‹ç¢ºèª
 
-•ûj: o—Í‚Ì‘O‚É' {"jsonrpc": "2.0", "id": 0, "result": " '‚ğAŒã‚É' "}\n '‚ğ‚Â‚¯‚Ä‚¨‚­‚é
+æ–¹é‡: å‡ºåŠ›ã®å‰ã«' {"jsonrpc": "2.0", "id": 0, "result": " 'ã‚’ã€å¾Œã«' "}\n 'ã‚’ã¤ã‘ã¦ãŠãã‚‹
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 */
