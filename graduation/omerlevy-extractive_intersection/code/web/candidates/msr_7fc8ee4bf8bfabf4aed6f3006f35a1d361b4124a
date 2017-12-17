@@ -1,0 +1,27 @@
+0	after	2	mark
+1	hughes	2	nsubj
+2	refused	8	advcl
+3	to	4	aux
+4	rehire	2	xcomp
+5	hernandez	4	dobj
+6	,	8	punct
+7	he	8	nsubj
+8	complained	-1	root
+9	to	8	prep
+10	the	14	det
+11	equal	14	nn
+12	employment	14	nn
+13	opportunity	14	nn
+14	commission	9	pobj
+
+0	hernandez	1	nsubj
+1	filed	-1	root
+2	an	7	det
+3	equal	7	nn
+4	employment	7	nn
+5	opportunity	7	nn
+6	commission	7	nn
+7	complaint	1	dobj
+8	and	1	cc
+9	sued	1	conj
+

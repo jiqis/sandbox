@@ -1,0 +1,23 @@
+0	others	6	nsubj
+1	with	0	prep
+2	such	4	predet
+3	a	4	det
+4	status	1	pobj
+5	are	6	cop
+6	egypt	-1	root
+7	,	6	punct
+8	israel	6	conj
+9	,	6	punct
+10	and	6	cc
+11	australia	6	conj
+
+0	nations	6	nsubj
+1	like	0	prep
+2	israel	1	pobj
+3	and	2	cc
+4	australia	2	conj
+5	already	6	advmod
+6	have	-1	root
+7	such	8	amod
+8	status	6	dobj
+

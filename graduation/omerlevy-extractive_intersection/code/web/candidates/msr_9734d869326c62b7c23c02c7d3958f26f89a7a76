@@ -1,0 +1,26 @@
+0	congratulations	7	nsubj
+1	on	0	prep
+2	being	3	auxpass
+3	named	1	pcomp
+4	time	5	nn
+5	magazine	3	xcomp
+6	's	5	possessive
+7	person	-1	root
+8	of	7	prep
+9	the	10	det
+10	year	8	pobj
+
+0	time	1	nn
+1	magazine	2	nsubj
+2	named	-1	root
+3	the	5	det
+4	american	5	amod
+5	soldier	7	nsubj
+6	its	7	poss
+7	person	2	xcomp
+8	of	7	prep
+9	the	10	det
+10	year	8	pobj
+11	for	10	prep
+12	2003	11	pobj
+

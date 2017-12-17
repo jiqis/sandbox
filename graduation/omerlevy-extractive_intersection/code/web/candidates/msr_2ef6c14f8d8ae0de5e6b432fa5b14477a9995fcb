@@ -1,0 +1,24 @@
+0	sources	1	nsubj
+1	say	-1	root
+2	agents	3	nsubj
+3	confiscated	1	ccomp
+4	"	7	punct
+5	several	7	amod
+6	"	7	punct
+7	documents	3	dobj
+8	he	10	nsubj
+9	was	10	aux
+10	carrying	7	rcmod
+
+0	agents	1	nsubj
+1	confiscated	-1	root
+2	several	4	amod
+3	classified	4	amod
+4	documents	1	dobj
+5	in	1	prep
+6	his	7	poss
+7	possession	5	pobj
+8	and	1	cc
+9	interrogated	1	conj
+10	him	9	dobj
+

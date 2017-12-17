@@ -1,0 +1,26 @@
+0	he	2	nsubj
+1	playfully	2	advmod
+2	chided	-1	root
+3	the	4	det
+4	senate	11	poss
+5	's	4	possessive
+6	"	11	punct
+7	little	11	amod
+8	bitty	11	nn
+9	tax	11	nn
+10	relief	11	nn
+11	plan	2	dobj
+12	.	2	punct
+13	"	2	punct
+
+0	we	3	nsubj
+1	do	3	aux
+2	n't	3	neg
+3	need	-1	root
+4	a	9	det
+5	little	9	amod
+6	bitty	9	nn
+7	tax	9	nn
+8	relief	9	nn
+9	plan	3	dobj
+

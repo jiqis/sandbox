@@ -1,0 +1,22 @@
+0	tisha	1	nn
+1	kresler	9	nsubj
+2	,	1	punct
+3	a	4	det
+4	spokeswoman	1	appos
+5	for	4	prep
+6	global	7	nn
+7	crossing	5	pobj
+8	,	1	punct
+9	declined	-1	root
+10	to	11	aux
+11	comment	9	xcomp
+
+0	a	3	det
+1	global	3	amod
+2	crossing	3	nn
+3	representative	4	nsubj
+4	had	-1	root
+5	no	7	neg
+6	immediate	7	amod
+7	comment	4	dobj
+

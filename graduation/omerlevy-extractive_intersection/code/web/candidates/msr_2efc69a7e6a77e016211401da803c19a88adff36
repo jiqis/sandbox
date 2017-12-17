@@ -1,0 +1,24 @@
+0	wal-mart	1	nsubj
+1	estimates	-1	root
+2	more	3	mwe
+3	than	5	quantmod
+4	100	5	number
+5	million	6	num
+6	americans	7	nsubj
+7	visit	1	ccomp
+8	their	9	poss
+9	stores	7	dobj
+10	every	11	det
+11	week	7	tmod
+
+0	each	1	det
+1	week	5	tmod
+2	138	3	number
+3	million	4	num
+4	shoppers	5	nsubj
+5	visit	-1	root
+6	wal-mart	9	poss
+7	's	6	possessive
+8	4,750	9	num
+9	stores	5	dobj
+

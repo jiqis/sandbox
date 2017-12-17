@@ -1,0 +1,26 @@
+0	mr	1	nn
+1	alibek	2	nsubj
+2	said	-1	root
+3	:	2	punct
+4	"	2	punct
+5	our	6	poss
+6	outcomes	9	nsubj
+7	are	9	cop
+8	very	9	advmod
+9	encouraging	2	ccomp
+
+0	"	13	punct
+1	our	2	poss
+2	outcomes	5	nsubj
+3	are	5	cop
+4	very	5	advmod
+5	encouraging	13	ccomp
+6	,	13	punct
+7	"	13	punct
+8	george	12	nn
+9	mason	12	nn
+10	researcher	12	nn
+11	ken	12	nn
+12	alibek	13	nsubj
+13	said	-1	root
+

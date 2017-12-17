@@ -44,7 +44,7 @@ int  main(){
 		i+=r;
 	}
 	buf[i]=0;
-	fprintf(stderr,"\e[34m%s\e[39m\n",buf);
+	fprintf(stderr,"\e[36m%s\e[39m\n",buf);
 	close(dest);
 	return 0;
 }

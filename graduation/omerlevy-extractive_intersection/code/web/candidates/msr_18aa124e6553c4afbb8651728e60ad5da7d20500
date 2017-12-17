@@ -1,0 +1,27 @@
+0	some	2	quantmod
+1	95	2	number
+2	million	3	num
+3	americans	10	nsubj
+4	--	5	punct
+5	half	3	dep
+6	of	5	prep
+7	all	8	det
+8	households	6	pobj
+9	--	5	punct
+10	invest	-1	root
+11	in	10	prep
+12	mutual	13	amod
+13	funds	11	pobj
+
+0	about	1	amod
+1	half	6	nsubj
+2	of	1	prep
+3	all	5	det
+4	u.s.	5	nn
+5	households	2	pobj
+6	have	-1	root
+7	money	6	dobj
+8	in	7	prep
+9	mutual	10	amod
+10	funds	8	pobj
+

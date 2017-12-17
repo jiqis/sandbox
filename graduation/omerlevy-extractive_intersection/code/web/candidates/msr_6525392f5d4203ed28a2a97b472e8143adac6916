@@ -1,0 +1,24 @@
+0	prosecutor	2	nn
+1	jim	2	nn
+2	hardin	3	nsubj
+3	called	-1	root
+4	the	5	det
+5	decision	7	nsubj
+6	a	7	det
+7	victory	3	xcomp
+8	for	7	prep
+9	kathleen	10	nn
+10	peterson	12	poss
+11	's	10	possessive
+12	family	8	pobj
+
+0	members	8	nsubj
+1	of	0	prep
+2	kathleen	3	nn
+3	peterson	5	poss
+4	's	3	possessive
+5	family	1	pobj
+6	were	8	cop
+7	not	8	neg
+8	present	-1	root
+

@@ -1,0 +1,19 @@
+0	only	8	advmod
+1	intel	2	nn
+2	corp.	6	poss
+3	's	2	possessive
+4	0.3	6	num
+5	percent	6	nn
+6	yield	8	nsubj
+7	was	8	cop
+8	lower	-1	root
+
+0	only	3	advmod
+1	intel	2	nn
+2	corp.	3	nsubj
+3	has	-1	root
+4	a	7	det
+5	lower	7	amod
+6	dividend	7	nn
+7	yield	3	dobj
+

@@ -1,0 +1,23 @@
+0	brendsel	7	nsubj
+1	and	0	cc
+2	chief	6	amod
+3	financial	6	amod
+4	officer	6	nn
+5	vaughn	6	nn
+6	clarke	0	conj
+7	resigned	-1	root
+8	june	7	tmod
+9	9	8	num
+
+0	the	1	det
+1	company	4	poss
+2	's	1	possessive
+3	chief	4	amod
+4	executive	5	nsubj
+5	retired	-1	root
+6	and	5	cc
+7	chief	9	amod
+8	financial	9	amod
+9	officer	10	nsubj
+10	resigned	5	conj
+

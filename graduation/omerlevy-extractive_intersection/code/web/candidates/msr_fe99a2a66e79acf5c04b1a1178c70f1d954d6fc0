@@ -1,0 +1,27 @@
+0	other	1	amod
+1	changes	5	nsubj
+2	in	1	prep
+3	the	4	det
+4	plan	2	pobj
+5	refine	11	ccomp
+6	his	8	poss
+7	original	8	amod
+8	vision	5	dobj
+9	,	11	punct
+10	libeskind	11	nsubj
+11	said	-1	root
+
+0	many	5	nsubj
+1	of	0	prep
+2	the	3	det
+3	changes	1	pobj
+4	are	5	cop
+5	improvements	12	ccomp
+6	to	5	prep
+7	the	9	det
+8	original	9	amod
+9	plan	6	pobj
+10	,	12	punct
+11	libeskind	12	nsubj
+12	said	-1	root
+

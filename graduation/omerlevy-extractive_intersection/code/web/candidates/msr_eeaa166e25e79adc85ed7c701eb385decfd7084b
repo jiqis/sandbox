@@ -1,0 +1,25 @@
+0	chiron	2	nsubj
+1	already	2	advmod
+2	has	-1	root
+3	nearly	4	quantmod
+4	20	6	num
+5	percent	6	nn
+6	acceptances	2	dobj
+7	from	6	prep
+8	powderject	10	poss
+9	's	8	possessive
+10	shareholders	7	pobj
+
+0	chiron	1	nsubj
+1	has	-1	root
+2	acceptances	1	dobj
+3	from	2	prep
+4	holders	3	pobj
+5	of	4	prep
+6	nearly	7	quantmod
+7	20	8	num
+8	percent	5	pobj
+9	of	8	prep
+10	powderject	11	nn
+11	shares	9	pobj
+

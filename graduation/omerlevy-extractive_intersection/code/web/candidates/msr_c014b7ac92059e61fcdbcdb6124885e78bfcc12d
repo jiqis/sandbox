@@ -1,0 +1,25 @@
+0	texans	9	nsubj
+1	saddled	0	vmod
+2	with	1	prep
+3	skyrocketing	2	pcomp
+4	homeowners	5	nn
+5	premiums	3	dobj
+6	might	9	aux
+7	finally	9	advmod
+8	be	9	aux
+9	getting	-1	root
+10	relief	9	dobj
+
+0	relief	1	nsubj
+1	is	-1	root
+2	in	1	prep
+3	sight	2	pobj
+4	for	3	prep
+5	texans	4	pobj
+6	saddled	5	vmod
+7	with	6	prep
+8	skyrocketing	7	pcomp
+9	homeowners	8	iobj
+10	insurance	11	nn
+11	premiums	8	dobj
+

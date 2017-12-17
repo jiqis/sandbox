@@ -1,0 +1,23 @@
+0	verisign	1	nsubj
+1	introduced	-1	root
+2	its	5	poss
+3	site	5	nn
+4	finder	5	nn
+5	service	1	dobj
+6	on	1	prep
+7	sept.	6	pobj
+8	15	7	num
+
+0	the	1	det
+1	battle	10	nsubj
+2	around	10	prep
+3	verisign	2	pobj
+4	"	10	punct
+5	s	10	cop
+6	three-week-old	10	amod
+7	site	10	nn
+8	finder	10	nn
+9	service	10	nn
+10	rages	-1	root
+11	on	10	prt
+

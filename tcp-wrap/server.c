@@ -11,16 +11,87 @@
 #include<sys/time.h>
 #include<errno.h>
 #define BUFSIZE 8192
+#define INTERNAL_BUFSIZE 65536
 #define PORT 8080
 #define output_log_wait(r,status,exit_code,process_name) if(r<0){perror("waitpid");}else if(WIFEXITED(status)){exit_code=WEXITSTATUS(status);fprintf(stderr,"child process '%s' exited successfully (%d)\n",process_name,exit_code);}else{fprintf(stderr,"%s: anormal child status: %04x\n",process_name,status);}
 
 char filename[256] = "./test-program.exe";
+
+int search_char(char buf[],char c,int size){
+	int i;
+	for(i=0;i<size;i++)
+		if(buf[i]==c) return i;
+	return -1;
+}
+
+int search_string(char buf[],char dest[],int size_buf,int size_dest){
+	int i=0,di,j;
+	while(i<size_buf-size_dest){
+		di=search_char(&(buf[i]),dest[0],size_buf-size_dest-i);
+		if(di==-1) break;
+		i+=di;
+		for(j=1;j<size_dest;j++){
+			if(buf[i+j]!=dest[j]) break;
+		}
+		if(j<size_dest) {
+			i++;
+			continue;
+		}
+		return i;
+	}
+	return -1;
+}
+
+void check_input(char buf[],int n, int *id,char *retbuf){
+	int i,di,st,en;
+	i=search_string(buf,"\"id\"",n,4);
+	if(i>=0){
+		di=search_char(&(buf[i]),':',n-i);
+		if(di>=0){
+			i+=di+1;
+			sscanf(&(buf[i]),"%d",id);
+		}
+	}
+	i=search_string(buf,"\"params\"",n,8);
+	if(i>=0){
+		di=search_char(&(buf[i]),':',n-i);
+		if(di==-1) {
+			retbuf[0]=0;
+			return;
+		}
+		i+=di+1;
+		di=search_char(&(buf[i]),'[',n-i);
+		if(di==-1) {
+			retbuf[0]=0;
+			return;
+		}
+		i+=di+1;
+		di=search_char(&(buf[i]),'"',n-i);
+		if(di==-1) {
+			retbuf[0]=0;
+			return;
+		}
+		i+=di+1;
+		st=i;
+		di=search_char(&(buf[i]),'"',n-i);
+		if(di==-1) {
+			retbuf[0]=0;
+			return;
+		}
+		i+=di;
+		en=i;
+		for(i=0;i<en-st;i++){
+			retbuf[i]=buf[st+i];
+		}
+		retbuf[i]=0;
+	}
+}
 int executer(int input,int output){
 	int status;
 	int exit_code;
-	char buf[BUFSIZE];
+	char buf[BUFSIZE],ibuf[INTERNAL_BUFSIZE]={};
 	int pi[2],po[2];
-	int count,i;
+	int count,i,j,id=0;
 	if(pipe(pi)<0){
 		perror("pipe");
 		return -1;
@@ -39,34 +110,37 @@ int executer(int input,int output){
 		i=0;
 		fprintf(stderr,"waiting input from client %d...\n",input);
 		if((count=read(input,buf,BUFSIZE))>0){
-			i=0;
 			if(count<BUFSIZE) buf[count]=0;
 			fprintf(stderr,"%s\n",buf);
-			while(i<count) i+=write(pi[1],buf,count);
+			for(j=0;j<count;j++)
+				ibuf[i+j]=buf[j];
+			i+=count;
 		}
+		check_input(ibuf,i,&id,buf);
+		i=0;
+		count=strlen(buf);
+		while(i<count) i+=write(pi[1],buf,count-i);
 		fprintf(stderr,"wrote %d byte\n",i);
 		close(pi[1]);
-		char header[]="{\"jsonrpc\": \"2.0\", \"id\": 0, \"result\": \"" ;
-		char footer[]="\"}\n";
-		if(write(output,header,strlen(header))<0){
-			perror("write");
-			exit(-1);
-		}
+		char header[]="{\"jsonrpc\": \"2.0\", \"result\": \"" ;
+		char footer[]="\", \"id\": 0}\n";
+		strcpy(ibuf,header);
+		i=strlen(ibuf);
 		while((count=read(po[0],buf,BUFSIZE))>0){
-			i=0;
 			if(count<BUFSIZE) buf[count]=0;
-			fprintf(stderr,">%s\n",buf);
-			while(i<count) i+=write(output,&(buf[i]),count);
+			
+			for(j=0;j<count;j++)
+				ibuf[i+j]=buf[j];
+			i+=count;
 		}
+		ibuf[i]=0;
+		if(ibuf[i-1]=='\n') ibuf[i-1]=0;
+		strcat(ibuf,footer);
+		count=strlen(ibuf);
+		fprintf(stderr,">%s\n",ibuf);
+		i=0;
+		while(i<count) i+=write(output,&(ibuf[i]),count-i);
 		close(po[0]);
-		if(count<0){
-			perror("read");
-			exit(-1);
-		}
-		if(write(output,footer,strlen(footer))<0){
-			perror("write");
-			exit(-1);
-		}
 		close(output);
 		exit(0);
 	}else{
@@ -82,8 +156,9 @@ int executer(int input,int output){
 			dup2(po[1],1);
 			close(input);
 			if(input!=output) close(output);
-			execl(filename,filename,NULL);
-//			execl("/cygdrive/c/ProgramData/Oracle/Java/javapath/java","java","-jar","./BerkeleyParser-1.7.jar","-gr","eng_sm6.gr",NULL);
+//			execl(filename,filename,NULL);
+//			execl("/cygdrive/c/ProgramData/Oracle/Java/javapath/java","java","-cp","./BerkeleyParser-1.7.jar","edu.berkeley.nlp.PCFGLA/TreeLabeler","-gr","eng_sm6.gr",NULL);
+				printf("{\"sentence\": [{\"words\": \"A rabbit runs faster than a turtle.\", \"dependencies\":[[1,2,
 			perror("test");
 			exit(-1);
 		}else{

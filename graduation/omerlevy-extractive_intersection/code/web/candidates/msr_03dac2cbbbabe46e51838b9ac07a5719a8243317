@@ -1,0 +1,23 @@
+0	the	1	det
+1	district	3	nsubj
+2	also	3	advmod
+3	sent	-1	root
+4	letters	3	dobj
+5	yesterday	3	tmod
+6	informing	3	xcomp
+7	parents	6	dobj
+8	of	7	prep
+9	the	10	det
+10	situation	8	pobj
+
+0	parents	1	nsubj
+1	received	-1	root
+2	letters	1	dobj
+3	informing	2	vmod
+4	them	3	dobj
+5	of	3	prep
+6	the	8	det
+7	possible	8	amod
+8	contamination	5	pobj
+9	yesterday	1	tmod
+

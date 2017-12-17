@@ -1,0 +1,24 @@
+0	new	1	amod
+1	legit	3	amod
+2	download	3	amod
+3	service	4	nsubj
+4	launches	-1	root
+5	with	4	prep
+6	pc	7	nn
+7	users	5	pobj
+8	in	7	prep
+9	mind	8	pobj
+
+0	buymusic	8	nsubj
+1	is	8	cop
+2	the	8	det
+3	first	8	amod
+4	subscription-free	8	amod
+5	paid	8	amod
+6	download	8	amod
+7	music	8	nn
+8	service	-1	root
+9	for	8	prep
+10	pc	11	nn
+11	users	9	pobj
+

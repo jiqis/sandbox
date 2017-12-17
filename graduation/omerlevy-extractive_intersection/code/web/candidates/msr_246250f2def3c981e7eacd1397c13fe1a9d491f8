@@ -1,0 +1,27 @@
+0	sens	3	nn
+1	.	3	punct
+2	john	3	nn
+3	kerry	7	nsubj
+4	and	3	cc
+5	bob	6	nn
+6	graham	3	conj
+7	declined	-1	root
+8	invitations	7	dobj
+9	to	10	aux
+10	speak	7	xcomp
+
+0	the	1	det
+1	no-shows	6	nsubj
+2	were	6	cop
+3	sens	6	nn
+4	.	6	punct
+5	john	6	nn
+6	kerry	-1	root
+7	of	6	prep
+8	massachusetts	7	pobj
+9	and	6	cc
+10	bob	11	nn
+11	graham	6	conj
+12	of	11	prep
+13	florida	12	pobj
+

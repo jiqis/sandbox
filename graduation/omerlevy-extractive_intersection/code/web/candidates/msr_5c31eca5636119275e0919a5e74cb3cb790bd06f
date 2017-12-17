@@ -1,0 +1,21 @@
+0	orange	1	nn
+1	shares	2	nsubj
+2	jumped	-1	root
+3	as	5	advmod
+4	much	5	advmod
+5	as	6	quantmod
+6	15	7	num
+7	percent	2	dobj
+
+0	france	2	nn
+1	telecom	2	nn
+2	shares	3	nsubj
+3	dropped	-1	root
+4	3.6	5	num
+5	percent	3	dobj
+6	while	8	mark
+7	orange	8	nsubj
+8	surged	3	advcl
+9	13	10	num
+10	percent	8	dobj
+

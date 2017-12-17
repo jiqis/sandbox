@@ -1,0 +1,24 @@
+0	prosecutors	1	nsubj
+1	filed	-1	root
+2	a	3	det
+3	motion	1	dobj
+4	informing	5	amod
+5	lee	3	dep
+6	they	7	nsubj
+7	intend	5	rcmod
+8	to	9	aux
+9	seek	7	xcomp
+10	the	12	det
+11	death	12	nn
+12	penalty	9	dobj
+
+0	he	1	nsubj
+1	added	-1	root
+2	that	5	mark
+3	prosecutors	5	nsubj
+4	will	5	aux
+5	seek	1	ccomp
+6	the	8	det
+7	death	8	nn
+8	penalty	5	dobj
+

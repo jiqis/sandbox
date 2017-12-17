@@ -1,0 +1,25 @@
+0	shiites	1	nsubj
+1	make	-1	root
+2	up	1	prt
+3	20	4	num
+4	percent	1	dobj
+5	of	4	prep
+6	the	7	det
+7	country	9	poss
+8	's	7	possessive
+9	population	5	pobj
+
+0	sunnis	1	nsubj
+1	make	-1	root
+2	up	1	prt
+3	77	4	num
+4	percent	1	dobj
+5	of	4	prep
+6	pakistan	8	poss
+7	's	6	possessive
+8	population	5	pobj
+9	,	8	punct
+10	shiites	8	appos
+11	20	12	num
+12	percent	4	dep
+

@@ -1,0 +1,18 @@
+0	druce	2	nsubj
+1	will	2	aux
+2	face	7	ccomp
+3	murder	4	nn
+4	charges	2	dobj
+5	,	7	punct
+6	conte	7	nsubj
+7	said	-1	root
+
+0	conte	1	nsubj
+1	said	-1	root
+2	druce	5	nsubjpass
+3	will	5	aux
+4	be	5	auxpass
+5	charged	1	ccomp
+6	with	5	prep
+7	murder	6	pobj
+

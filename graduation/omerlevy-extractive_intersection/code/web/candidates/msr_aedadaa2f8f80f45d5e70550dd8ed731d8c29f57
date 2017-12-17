@@ -1,0 +1,22 @@
+0	gregory	1	nn
+1	parseghian	9	nsubjpass
+2	,	1	punct
+3	a	6	det
+4	former	6	amod
+5	investment	6	nn
+6	banker	1	appos
+7	,	1	punct
+8	was	9	auxpass
+9	appointed	-1	root
+10	chief	11	amod
+11	executive	9	xcomp
+
+0	greg	1	nn
+1	parseghian	3	nsubjpass
+2	was	3	auxpass
+3	appointed	-1	root
+4	the	7	det
+5	new	7	amod
+6	chief	7	nn
+7	executive	3	xcomp
+

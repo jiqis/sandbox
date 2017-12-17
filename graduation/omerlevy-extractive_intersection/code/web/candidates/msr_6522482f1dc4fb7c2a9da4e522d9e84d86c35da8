@@ -1,0 +1,20 @@
+0	russ	1	nn
+1	britt	7	nsubj
+2	is	7	cop
+3	the	7	det
+4	los	7	nn
+5	angeles	7	nn
+6	bureau	7	nn
+7	chief	-1	root
+8	for	7	prep
+9	cbs.marketwatch.com	8	pobj
+
+0	emily	1	nn
+1	church	5	nsubj
+2	is	5	cop
+3	london	5	nn
+4	bureau	5	nn
+5	chief	-1	root
+6	of	5	prep
+7	cbs.marketwatch.com	6	pobj
+

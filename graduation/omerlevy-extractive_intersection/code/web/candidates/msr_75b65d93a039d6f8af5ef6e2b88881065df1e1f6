@@ -1,0 +1,25 @@
+0	they	3	nsubjpass
+1	are	3	aux
+2	being	3	auxpass
+3	held	-1	root
+4	on	3	prep
+5	immigration	6	nn
+6	violations	4	pobj
+7	as	11	mark
+8	the	9	det
+9	incident	11	nsubjpass
+10	is	11	auxpass
+11	investigated	3	advcl
+
+0	both	1	det
+1	men	4	nsubjpass
+2	are	4	aux
+3	being	4	auxpass
+4	held	-1	root
+5	for	4	prep
+6	investigation	5	pobj
+7	of	6	prep
+8	administrative	10	amod
+9	immigration	10	nn
+10	violations	7	pobj
+

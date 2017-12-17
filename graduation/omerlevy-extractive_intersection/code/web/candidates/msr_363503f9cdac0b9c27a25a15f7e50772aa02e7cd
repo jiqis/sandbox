@@ -1,0 +1,24 @@
+0	two	1	num
+1	years	2	npadvmod
+2	later	8	advmod
+3	,	8	punct
+4	the	6	det
+5	insurance	6	nn
+6	coverage	8	nsubj
+7	would	8	aux
+8	begin	-1	root
+
+0	under	10	prep
+1	the	2	det
+2	agreement	0	pobj
+3	,	10	punct
+4	medicare	5	nn
+5	coverage	10	nsubj
+6	for	5	prep
+7	drug	8	nn
+8	benefits	6	pobj
+9	would	10	aux
+10	begin	-1	root
+11	in	10	prep
+12	2006	11	pobj
+

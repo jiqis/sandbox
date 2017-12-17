@@ -1,0 +1,24 @@
+0	scientists	1	nsubj
+1	believed	-1	root
+2	stardust	3	nsubj
+3	trapped	1	ccomp
+4	thousands	3	dobj
+5	of	4	prep
+6	particles	5	pobj
+7	of	6	prep
+8	dust	7	pobj
+
+0	stardust	2	nsubjpass
+1	was	2	auxpass
+2	designed	-1	root
+3	to	4	aux
+4	gather	2	xcomp
+5	thousands	4	dobj
+6	of	5	prep
+7	dust	8	nn
+8	particles	6	pobj
+9	streaming	8	vmod
+10	from	9	prep
+11	wild	10	pobj
+12	2	11	num
+

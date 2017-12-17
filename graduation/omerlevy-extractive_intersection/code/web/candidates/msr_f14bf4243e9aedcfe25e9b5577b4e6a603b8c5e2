@@ -1,0 +1,20 @@
+0	chairman	2	nn
+1	michael	2	nn
+2	powell	5	nsubj
+3	and	2	cc
+4	fcc	2	conj
+5	colleagues	-1	root
+6	at	5	prep
+7	the	9	det
+8	wednesday	9	nn
+9	hearing	6	pobj
+
+0	fcc	3	nn
+1	chief	3	nn
+2	michael	3	nn
+3	powell	4	nsubj
+4	presides	-1	root
+5	over	4	prep
+6	hearing	5	pobj
+7	monday	4	tmod
+

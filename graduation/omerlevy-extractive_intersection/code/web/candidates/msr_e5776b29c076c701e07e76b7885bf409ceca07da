@@ -1,0 +1,27 @@
+0	among	7	prep
+1	three	3	num
+2	major	3	amod
+3	candidates	0	pobj
+4	,	7	punct
+5	schwarzenegger	7	nsubj
+6	is	7	aux
+7	wining	-1	root
+8	the	9	det
+9	battle	7	dobj
+10	for	7	prep
+11	independents	10	pobj
+12	and	11	cc
+13	crossover	14	nn
+14	voters	11	conj
+
+0	schwarzenegger	1	nsubj
+1	picks	-1	root
+2	up	1	prt
+3	more	4	amod
+4	independents	1	dobj
+5	and	4	cc
+6	crossover	7	nn
+7	voters	4	conj
+8	than	4	prep
+9	bustamante	8	pobj
+

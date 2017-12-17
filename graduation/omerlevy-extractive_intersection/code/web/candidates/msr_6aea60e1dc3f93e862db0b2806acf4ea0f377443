@@ -1,0 +1,27 @@
+0	through	4	prep
+1	thursday	0	pobj
+2	,	4	punct
+3	oracle	4	nsubj
+4	said	-1	root
+5	34.75	6	number
+6	million	8	num
+7	peoplesoft	8	nn
+8	shares	11	nsubjpass
+9	had	11	aux
+10	been	11	auxpass
+11	tendered	4	ccomp
+
+0	some	2	quantmod
+1	34.7	2	number
+2	million	3	num
+3	shares	6	nsubjpass
+4	have	6	aux
+5	been	6	auxpass
+6	tendered	9	ccomp
+7	,	9	punct
+8	oracle	9	nsubj
+9	said	-1	root
+10	in	9	prep
+11	a	12	det
+12	statement	10	pobj
+

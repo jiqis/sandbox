@@ -1,0 +1,24 @@
+0	we	1	nsubj
+1	think	-1	root
+2	they	3	nsubj
+3	have	1	ccomp
+4	the	5	det
+5	right	3	dobj
+6	to	7	aux
+7	choose	5	vmod
+
+0	"	13	punct
+1	we	2	nsubj
+2	think	13	ccomp
+3	peoplesoft	4	amod
+4	customers	5	nsubj
+5	deserve	2	ccomp
+6	the	7	det
+7	right	5	dobj
+8	to	9	aux
+9	choose	7	vmod
+10	,	13	punct
+11	"	13	punct
+12	ellison	13	nsubj
+13	said	-1	root
+

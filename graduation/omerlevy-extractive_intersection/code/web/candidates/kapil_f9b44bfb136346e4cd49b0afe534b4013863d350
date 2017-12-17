@@ -1,0 +1,23 @@
+0	small	1	amod
+1	traces	7	nsubjpass
+2	of	1	prep
+3	radioactive	4	amod
+4	substances	2	pobj
+5	had	7	aux
+6	been	7	auxpass
+7	found	-1	root
+8	on	7	prep
+9	the	10	det
+10	planes	8	pobj
+
+0	traces	6	nsubjpass
+1	of	0	prep
+2	radioactive	3	nn
+3	polonium-210	1	pobj
+4	have	6	aux
+5	been	6	auxpass
+6	found	-1	root
+7	in	6	prep
+8	his	9	poss
+9	body	7	pobj
+

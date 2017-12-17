@@ -1,0 +1,26 @@
+0	jordan	1	nn
+1	green	9	nsubj
+2	,	1	punct
+3	the	4	det
+4	prelate	7	poss
+5	's	4	possessive
+6	private	7	amod
+7	lawyer	1	appos
+8	,	1	punct
+9	said	-1	root
+10	he	11	nsubj
+11	had	9	ccomp
+12	no	13	neg
+13	comment	11	dobj
+
+0	o'brien	2	poss
+1	's	0	possessive
+2	attorney	7	nsubj
+3	,	2	punct
+4	jordan	5	nn
+5	green	2	appos
+6	,	2	punct
+7	declined	-1	root
+8	to	9	aux
+9	comment	7	xcomp
+

@@ -1,0 +1,26 @@
+0	kiernan	1	nsubj
+1	testified	-1	root
+2	that	5	mark
+3	seifert	5	nsubj
+4	had	5	aux
+5	received	1	ccomp
+6	a	8	det
+7	gunshot	8	nn
+8	wound	5	dobj
+9	to	8	prep
+10	the	11	det
+11	back	9	pobj
+
+0	seifert	5	nsubj
+1	,	3	punct
+2	he	3	nsubj
+3	testified	5	parataxis
+4	,	3	punct
+5	had	-1	root
+6	a	8	det
+7	gunshot	8	nn
+8	wound	5	dobj
+9	in	5	prep
+10	the	11	det
+11	back	9	pobj
+

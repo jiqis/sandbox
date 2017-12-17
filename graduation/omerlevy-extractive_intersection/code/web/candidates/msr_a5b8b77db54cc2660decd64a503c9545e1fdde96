@@ -1,0 +1,22 @@
+0	officials	10	nsubjpass
+1	with	0	prep
+2	north	4	nn
+3	carolina	4	nn
+4	speedway	1	pobj
+5	at	4	prep
+6	rockingham	5	pobj
+7	could	10	aux
+8	not	10	neg
+9	be	10	auxpass
+10	reached	-1	root
+
+0	nascar	1	nn
+1	officials	5	nsubjpass
+2	could	5	aux
+3	not	5	neg
+4	be	5	auxpass
+5	reached	-1	root
+6	for	5	prep
+7	comment	6	pobj
+8	tuesday	7	appos
+

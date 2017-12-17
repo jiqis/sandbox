@@ -1,0 +1,24 @@
+0	"	8	punct
+1	frank	2	nn
+2	quattrone	4	nsubj
+3	is	4	cop
+4	innocent	8	ccomp
+5	,	8	punct
+6	"	8	punct
+7	keker	8	nsubj
+8	said	-1	root
+9	in	8	prep
+10	a	11	det
+11	statement	9	pobj
+
+0	quattrone	4	nn
+1	lawyer	4	nn
+2	john	4	nn
+3	w.	4	nn
+4	keker	5	nsubj
+5	said	-1	root
+6	his	7	poss
+7	client	9	nsubj
+8	is	9	cop
+9	innocent	5	ccomp
+

@@ -1,0 +1,24 @@
+0	the	2	det
+1	research	2	nn
+2	firm	5	nsubj
+3	earlier	5	advmod
+4	had	5	aux
+5	forecast	-1	root
+6	an	7	det
+7	increase	5	dobj
+8	of	7	prep
+9	4.9	10	num
+10	percent	8	pobj
+
+0	the	1	det
+1	firm	3	nsubj
+2	had	3	aux
+3	predicted	-1	root
+4	earlier	6	advmod
+5	this	6	det
+6	year	3	tmod
+7	a	10	det
+8	4.9	9	number
+9	percent	10	amod
+10	increase	3	dobj
+

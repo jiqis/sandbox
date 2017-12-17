@@ -1,0 +1,25 @@
+0	such	2	predet
+1	a	2	det
+2	step	4	nsubj
+3	could	4	aux
+4	put	-1	root
+5	the	6	det
+6	issue	4	dobj
+7	before	4	prep
+8	the	11	det
+9	un	11	nn
+10	security	11	nn
+11	council	7	pobj
+
+0	the	1	det
+1	matter	5	nsubjpass
+2	could	5	aux
+3	then	5	advmod
+4	be	5	auxpass
+5	sent	-1	root
+6	to	5	prep
+7	the	10	det
+8	u.n.	10	nn
+9	security	10	nn
+10	council	6	pobj
+

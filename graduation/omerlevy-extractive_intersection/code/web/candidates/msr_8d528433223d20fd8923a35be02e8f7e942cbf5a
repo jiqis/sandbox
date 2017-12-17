@@ -1,0 +1,24 @@
+0	that	1	det
+1	objection	3	nsubjpass
+2	was	3	auxpass
+3	cited	-1	root
+4	by	3	prep
+5	peoplesoft	7	poss
+6	's	5	possessive
+7	board	4	pobj
+8	in	7	prep
+9	rejecting	8	pcomp
+10	oracle	12	poss
+11	's	10	possessive
+12	offer	9	dobj
+
+0	peoplesoft	2	poss
+1	's	0	possessive
+2	board	4	nsubj
+3	has	4	aux
+4	recommended	-1	root
+5	stockholders	4	dobj
+6	reject	4	dep
+7	the	8	det
+8	offer	6	dobj
+

@@ -1,0 +1,27 @@
+0	veteran	1	amod
+1	stage	7	nsubj
+2	and	1	cc
+3	screen	6	nn
+4	actor	6	nn
+5	hume	6	nn
+6	cronyn	1	conj
+7	died	-1	root
+8	of	7	prep
+9	cancer	8	pobj
+10	sunday	7	tmod
+
+0	character	3	nn
+1	actor	3	nn
+2	hume	3	nn
+3	cronyn	7	nsubj
+4	,	3	punct
+5	91	3	amod
+6	,	3	punct
+7	died	-1	root
+8	sunday	7	tmod
+9	at	7	prep
+10	his	11	poss
+11	home	9	pobj
+12	in	11	prep
+13	connecticut	12	pobj
+

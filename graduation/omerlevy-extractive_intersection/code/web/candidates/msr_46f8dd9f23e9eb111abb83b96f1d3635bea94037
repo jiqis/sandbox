@@ -1,0 +1,26 @@
+0	sterling	1	nsubj
+1	was	-1	root
+2	down	1	advmod
+3	0.8	4	num
+4	percent	2	pobj
+5	against	4	prep
+6	the	7	det
+7	dollar	5	pobj
+8	at	1	prep
+9	$	8	pobj
+10	1.5875	9	num
+11	gbp=	9	advmod
+
+0	the	1	det
+1	dollar	2	nsubj
+2	rose	-1	root
+3	0.15	4	num
+4	percent	2	dobj
+5	against	2	prep
+6	the	8	det
+7	japanese	8	amod
+8	currency	5	pobj
+9	to	2	prep
+10	115.97	11	num
+11	yen	9	pobj
+

@@ -1,0 +1,26 @@
+0	ricky	1	nn
+1	clemons	8	poss
+2	'	1	possessive
+3	brief	5	amod
+4	,	5	punct
+5	troubled	8	amod
+6	missouri	8	nn
+7	basketball	8	nn
+8	career	10	nsubj
+9	is	10	cop
+10	over	-1	root
+
+0	missouri	1	nsubj
+1	kicked	-1	root
+2	ricky	3	nn
+3	clemons	1	dobj
+4	off	1	prep
+5	its	6	poss
+6	team	4	pobj
+7	,	1	punct
+8	ending	1	vmod
+9	his	11	poss
+10	troubled	11	amod
+11	career	8	dobj
+12	there	8	advmod
+

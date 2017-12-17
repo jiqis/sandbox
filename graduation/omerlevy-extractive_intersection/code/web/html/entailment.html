@@ -1,0 +1,106 @@
+<html>
+
+<body onload="init()">
+<title>Entailment</title>
+
+CSS
+
+<div id="form-container">
+
+<div class="small_buffer"></div>
+<h1><span class="blue">Entail</span><span class="red">ment</span></h1>
+<div class="small_buffer"></div>
+
+<form method=get action="grammatical" id="formic">
+
+<input type="hidden" name="user_id" value="USER_ID">
+<input type="hidden" name="candidate_id" value="CANDIDATE_ID">
+<input type="hidden" name="alignments" id="alignments" value="ALIGNMENTS">
+    <input type="hidden" name="extractions" id="extractions" value="EXTRACTIONS">
+
+<div class="form-name">
+</br>
+</div>
+<div class="buffer"></div>
+
+<div class="form-instructions">
+These questions were generated from your alignment. Answer them with <b>common sense</b>.</br>
+</br>
+Each question consists of a premise (the first sentence) and a hypothesis (the second sentence).</br>
+Assuming that the premise is true, you need to decide whether the hypothesis is true as well. For example:</br>
+</br>
+<table>
+<tr>
+<td class="regular">&nbsp;</td>
+<td class="regular">&nbsp;<b><i>Premise:</i></b>&nbsp;&nbsp;</td>
+<td class="regular">&nbsp;</td>
+<td class="regular">President Obama flew to Ottawa on Wednesday.</td>
+<td class="regular"></td>
+<td class="pad">&nbsp;</td>
+</tr>
+<tr>
+<td class="regular">&nbsp;</td>
+<td class="regular">&nbsp;<b><i>Hypotheses:</i></b>&nbsp;&nbsp;</td>
+<td class="regular"><span class="blue">&#10004;</span></td>
+<td class="regular">The president visited Canada.</td>
+<td class="regular"><i>It is common knowledge that Ottawa is in Canada</i></td>
+<td class="pad">&nbsp;</td>
+</tr>
+<tr>
+<td class="regular">&nbsp;</td>
+<td class="regular">&nbsp;</td>
+<td class="regular"><span class="blue">&#10004;</span></td>
+<td class="regular">Obama went [somewhere] on Wednesday.</td>
+<td class="regular"><i>Placeholders, such as [somewhere], can be used to generalize</i></td>
+<td class="pad">&nbsp;</td>
+</tr>
+<tr>
+<td class="regular">&nbsp;</td>
+<td class="regular">&nbsp;</td>
+<td class="regular"><span class="red">&#10008;</span></td>
+<td class="regular">Obama went [somewhere] on <b>Tuesday</b>.</td>
+<td class="regular"><i>The events of Tuesday cannot be inferred from the premise</i></td>
+<td class="pad">&nbsp;</td>
+</tr>
+<tr>
+<td class="regular">&nbsp;</td>
+<td class="regular">&nbsp;</td>
+<td class="regular"><span class="red">&#10008;</span></td>
+<td class="regular">Obama ate Canadian bacon.</td>
+<td class="regular"><i>What Obama did or did not eat cannot be inferred from the premise</i></td>
+<td class="pad">&nbsp;</td>
+</tr>
+</table>
+</br>
+Some questions contain dropdown menus with <b>placeholders</b>, such as [something].</br>
+Select the best fit that still keeps the hypothesis valid. If none of the placeholders makes the hypothesis valid, select "No".</br>
+</br>
+In any case, if the hypothesis is ungrammatical or does not make sense, select "It's not a sentence".</br>
+</br>
+Note: certain combinations of answers may automatically disable (gray out) other questions. That's fine.
+<div class="buffer"></div>
+</div>
+
+<div class="form-name">
+</br>
+</div>
+
+<div class="form-questionnaire">
+QUESTIONNAIRE
+</div>
+
+<div class="form-name">
+</br>
+</div>
+
+<div class="buffer"></div>
+<input type="submit" name="finito" onclick="return validateEntailments();">
+<div class="buffer"></div>
+
+</form>
+</div>
+
+SCRIPT
+
+</body>
+</html>

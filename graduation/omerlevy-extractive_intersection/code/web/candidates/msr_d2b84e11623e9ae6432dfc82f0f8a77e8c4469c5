@@ -1,0 +1,25 @@
+0	he	1	nsubj
+1	projected	-1	root
+2	vanderpool	5	nsubj
+3	will	5	aux
+4	be	5	cop
+5	available	1	ccomp
+6	within	5	prep
+7	the	10	det
+8	next	10	amod
+9	five	10	num
+10	years	6	pobj
+
+0	products	2	nn
+1	featuring	2	nn
+2	vanderpool	5	nsubjpass
+3	will	5	aux
+4	be	5	auxpass
+5	released	11	ccomp
+6	within	5	prep
+7	five	8	num
+8	years	6	pobj
+9	,	11	punct
+10	he	11	nsubj
+11	said	-1	root
+

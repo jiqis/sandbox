@@ -1,0 +1,151 @@
+<html>
+
+<body>
+<title>Sentence Fusion</title>
+
+CSS
+
+<div id="form-container">
+
+<div class="small_buffer"></div>
+<h1><span class="blue">Sentence</span> <span class="red">Fusion</span></h1>
+<div class="small_buffer"></div>
+
+<form method=get action='thanks' id='formic'>
+
+<input type="hidden" name="user_id" value="USER_ID">
+<input type="hidden" name="candidate_id" value="CANDIDATE_ID">
+<input type="hidden" name="alignments" id="alignments" value="ALIGNMENTS">
+<input type="hidden" name="extractions" id="extractions" value="EXTRACTIONS">
+<input type="hidden" name="entailments" id="entailments" value="ENTAILMENTS">
+
+<div class="form-name">
+</br>
+</div>
+<div class="buffer"></div>
+
+<div class="form-instructions">
+You are given automatically-generated sentences, based on your decisions in the previous phases.</br>
+Apply a <b>minimal</b> amount of <b>inflections</b> or <b>reorderings</b> to make them grammatical, and click "It's good now" when done. For example:</br>
+</br>
+<table>
+<tr>
+<td class="regular">&nbsp;</td>
+<td class="regular"><span class="blue">&#10004;</span></td>
+<td class="regular">"books" / "book"</td>
+<td class="regular">&nbsp;&nbsp;&nbsp;</td>
+<td class="regular"><i>Plural to singular inflection</i></td>
+<td class="pad">&nbsp;</td>
+</tr>
+<tr>
+<td class="regular">&nbsp;</td>
+<td class="regular"><span class="blue">&#10004;</span></td>
+<td class="regular">"love" / "loved"</td>
+<td class="regular">&nbsp;&nbsp;&nbsp;</td>
+<td class="regular"><i>Tense inflection</i></td>
+<td class="pad">&nbsp;</td>
+</tr>
+<tr>
+<td class="regular">&nbsp;</td>
+<td class="regular"><span class="blue">&#10004;</span></td>
+<td class="regular">"a" / "an"</td>
+<td class="regular">&nbsp;&nbsp;&nbsp;</td>
+<td class="regular"><i>Phonetic inflection</i></td>
+<td class="pad">&nbsp;</td>
+</tr>
+<tr>
+<td class="regular">&nbsp;</td>
+<td class="regular"><span class="blue">&#10004;</span></td>
+<td class="regular">"he is from [some*]" / "he is from [somewhere]"</td>
+<td class="regular">&nbsp;&nbsp;&nbsp;</td>
+<td class="regular"><i>Placeholder inflection: changing [some*] into [someone], [somewhere], [sometime], etc</i></td>
+<td class="pad">&nbsp;</td>
+</tr>
+<tr>
+<td class="regular">&nbsp;</td>
+<td class="regular"><span class="blue">&#10004;</span></td>
+<td class="regular">"the who is tall man" / "the man who is tall"</td>
+<td class="regular">&nbsp;&nbsp;&nbsp;</td>
+<td class="regular"><i>Noun-modifier reordering</i></td>
+<td class="pad">&nbsp;</td>
+</tr>
+<tr>
+<td class="regular">&nbsp;</td>
+<td class="regular"><span class="blue">&#10004;</span></td>
+<td class="regular">"the man tall" / "the tall man"</td>
+<td class="regular">&nbsp;&nbsp;&nbsp;</td>
+<td class="regular"><i>Noun-modifier reordering</i></td>
+<td class="pad">&nbsp;</td>
+</tr>
+<tr>
+<td class="regular"><span class="small">&nbsp;</span></td>
+<td class="regular"><span class="small">&nbsp;</span></td>
+<td class="regular"><span class="small">&nbsp;</span></td>
+<td class="regular"><span class="small">&nbsp;</span></td>
+<td class="regular"><span class="small">&nbsp;</span></td>
+<td class="pad"><span class="small">&nbsp;</span></td>
+</tr>
+<tr>
+<td class="regular">&nbsp;</td>
+<td class="regular"><span class="red">&#10008;</span></td>
+<td class="regular">"America" / "American"</td>
+<td class="regular">&nbsp;&nbsp;&nbsp;</td>
+<td class="regular"><i>Avoid changing parts-of-speech (e.g. nouns into adjectives)</i></td>
+<td class="pad">&nbsp;</td>
+</tr>
+<tr>
+<td class="regular">&nbsp;</td>
+<td class="regular"><span class="red">&#10008;</span></td>
+<td class="regular">"he is from [some*]" / "he is from Brazil"</td>
+<td class="regular">&nbsp;&nbsp;&nbsp;</td>
+<td class="regular"><i>Avoid substituting placeholders with real words</i></td>
+<td class="pad">&nbsp;</td>
+</tr>
+<tr>
+<td class="regular">&nbsp;</td>
+<td class="regular"><span class="red">&#10008;</span></td>
+<td class="regular">"Bob bought salad" / "salad bought Bob"</td>
+<td class="regular">&nbsp;&nbsp;&nbsp;</td>
+<td class="regular"><i>Avoid reordering a verb's arguments (e.g. subject and object)</i></td>
+<td class="pad">&nbsp;</td>
+</tr>
+<tr>
+<td class="regular">&nbsp;</td>
+<td class="regular"><span class="red">&#10008;</span></td>
+<td class="regular">"Bob bought salad" / "Bob bought <b>a</b> salad"</td>
+<td class="regular">&nbsp;&nbsp;&nbsp;</td>
+<td class="regular"><i>Avoid adding new words, even if they're function words</i></td>
+<td class="pad">&nbsp;</td>
+</tr>
+</table>
+</br>
+Most sentences will already be fine, and will not require any changes. There is no need to capitalize or add punctuation. <b>Do not add new words.</b> Do not delete words.</br>
+If a sentence cannot be made grammatical without changing its meaning, mark it as "Impossible".</br>
+Click "Submit" when done.
+<div class="buffer"></div>
+</div>
+
+
+<div class="form-name">
+</br>
+</div>
+
+<div class="form-questionnaire">
+QUESTIONNAIRE
+</div>
+
+<div class="form-name">
+</br>
+</div>
+
+<div class="buffer"></div>
+<input type="submit" name="finito" onclick="return validateGrammar();">
+<div class="buffer"></div>
+
+</form>
+</div>
+
+SCRIPT
+
+</body>
+</html>

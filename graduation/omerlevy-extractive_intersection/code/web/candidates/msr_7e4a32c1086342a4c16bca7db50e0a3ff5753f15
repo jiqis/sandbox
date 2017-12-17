@@ -1,0 +1,26 @@
+0	both	1	det
+1	papers	4	nsubjpass
+2	are	4	aux
+3	being	4	auxpass
+4	published	-1	root
+5	today	4	tmod
+6	in	4	prep
+7	the	10	det
+8	new	10	nn
+9	england	10	nn
+10	journal	6	pobj
+11	of	10	prep
+12	medicine	11	pobj
+
+0	the	1	det
+1	study	2	nsubj
+2	appears	-1	root
+3	today	2	tmod
+4	in	2	prep
+5	the	8	det
+6	new	8	nn
+7	england	8	nn
+8	journal	4	pobj
+9	of	8	prep
+10	medicine	9	pobj
+

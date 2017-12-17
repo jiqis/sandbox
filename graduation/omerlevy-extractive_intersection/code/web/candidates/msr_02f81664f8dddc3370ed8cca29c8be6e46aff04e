@@ -1,0 +1,25 @@
+0	the	1	det
+1	woman	3	nsubjpass
+2	was	3	auxpass
+3	hospitalized	10	ccomp
+4	june	3	tmod
+5	15	4	num
+6	,	10	punct
+7	kansas	9	nn
+8	health	9	nn
+9	officials	10	nsubj
+10	said	-1	root
+
+0	missouri	2	nn
+1	health	2	nn
+2	officials	3	nsubj
+3	said	-1	root
+4	he	8	nsubjpass
+5	had	8	aux
+6	not	8	neg
+7	been	8	auxpass
+8	hospitalized	3	ccomp
+9	and	8	cc
+10	is	11	aux
+11	recovering	8	conj
+

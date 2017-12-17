@@ -1,0 +1,24 @@
+0	its	1	poss
+1	keywords	3	nsubjpass
+2	are	3	auxpass
+3	supported	-1	root
+4	by	3	prep
+5	chinese	8	amod
+6	language	8	nn
+7	web	8	nn
+8	portals	4	pobj
+
+0	chinese	3	amod
+1	language	3	nn
+2	web	3	nn
+3	portals	5	nsubj
+4	also	5	advmod
+5	support	12	ccomp
+6	3721	7	num
+7	keywords	5	dobj
+8	,	12	punct
+9	the	11	det
+10	web	11	nn
+11	site	12	nsubj
+12	said	-1	root
+

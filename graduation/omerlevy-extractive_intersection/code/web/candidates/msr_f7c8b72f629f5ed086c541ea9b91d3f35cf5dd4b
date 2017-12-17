@@ -1,0 +1,27 @@
+0	the	2	det
+1	last	2	amod
+2	time	6	nsubjpass
+3	the	4	det
+4	survey	6	nsubjpass
+5	was	6	auxpass
+6	conducted	13	ccomp
+7	,	6	punct
+8	in	6	prep
+9	1995	8	pobj
+10	,	13	punct
+11	those	12	det
+12	numbers	13	nsubj
+13	matched	-1	root
+
+0	in	10	prep
+1	1995	0	pobj
+2	,	10	punct
+3	the	5	det
+4	last	5	amod
+5	survey	10	nsubj
+6	,	10	punct
+7	those	8	det
+8	numbers	10	nsubj
+9	were	10	cop
+10	equal	-1	root
+

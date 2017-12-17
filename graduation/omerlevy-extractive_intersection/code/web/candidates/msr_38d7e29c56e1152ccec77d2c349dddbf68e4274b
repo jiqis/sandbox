@@ -1,0 +1,27 @@
+0	fifty-seven	1	amod
+1	senators	8	nsubj
+2	,	1	punct
+3	including	1	prep
+4	24	5	num
+5	republicans	3	pobj
+6	,	1	punct
+7	have	8	aux
+8	signed	-1	root
+9	the	10	det
+10	letter	8	dobj
+
+0	of	9	prep
+1	those	0	pobj
+2	who	3	nsubj
+3	signed	1	rcmod
+4	the	5	det
+5	letter	3	dobj
+6	,	9	punct
+7	57	9	nsubj
+8	are	9	cop
+9	senators	-1	root
+10	,	9	punct
+11	including	9	prep
+12	24	13	num
+13	republicans	11	pobj
+

@@ -1,0 +1,23 @@
+0	hilsenrath	5	nsubjpass
+1	and	0	cc
+2	klarman	0	conj
+3	each	5	dep
+4	were	5	auxpass
+5	indicted	-1	root
+6	on	5	prep
+7	three	8	num
+8	counts	6	pobj
+9	of	8	prep
+10	securities	11	nn
+11	fraud	9	pobj
+
+0	klarman	2	nsubjpass
+1	was	2	auxpass
+2	charged	-1	root
+3	with	2	prep
+4	16	5	num
+5	counts	3	pobj
+6	of	5	prep
+7	wire	8	nn
+8	fraud	6	pobj
+
